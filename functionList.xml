@@ -100,6 +100,8 @@
 			<!-- ======================================================================== -->
 			<association id=    "universe_basic"      userDefinedLangName="UniVerse BASIC" />
 			<association id=    "universe_basic"      ext=".bas"                           />
+			<association id=    "markdown"        userDefinedLangName="Markdown (preinstalled)"/>
+			<association id=    "markdown"      ext=".md"                           />
 			<!-- ======================================================================== -->
 		</associationMap>
 		<parsers>
@@ -1209,6 +1211,24 @@
 						"
 				/>
 			</parser>
+			
+			<!-- ============================================== [ Markdown User Defined ] -->
+
+			<!--
+			<!--
+			|   Based on:
+			|       https://community.notepad-plus-plus.org/topic/21148/can-i-use-function-list-in-notepad-7-9-5/2
+			-->
+			<parser
+				displayName="Markdown (preinstalled)"
+				id         ="markdown"
+			>
+				<!-- <function mainExpr="(?x-s)(^[#]+\s*(.*?)$|^(.*)(?=[\r\n]+^([-=])\4{2,}\s*$))"/> -->
+				<function mainExpr="(?-s)^#{1,6}(?:(?=[\t\x20]*$)|[\t\x20]+\K.+)|^.+(?=\R\x20{0,3}[-=]+[\t\x20]*$)"/>
+				
+			</parser>
+			
+			
 			
 			<!-- ======================================================= [ BaanC ] -->
 			
